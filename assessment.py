@@ -77,7 +77,7 @@ def get_melon_price(melon_name):
 
 
 def word_length_sorted(words):
-    from sortedcontainers import SortedDict
+
     """Return list of word-lengths and words.
 
     Given a list of words, return a list of tuples, ordered by
@@ -108,9 +108,11 @@ def word_length_sorted(words):
             sorted_values = sorted(word_len_dict[len(word)])
             word_len_dict[len(word)] = sorted_values
 
-    sorted_dict = SortedDict(word_len_dict) 
 
-    return sorted_dict.items()
+    sorted_dict = word_len_dict.items()
+
+
+    return sorted(sorted_dict)
 
 
 def translate_to_pirate_talk(phrase):
